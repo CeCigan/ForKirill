@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.4.css">>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
+    <title>QUnit Basic Test</title>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script>
+        function isNumerik(num){
+            if(num % 2 == 0){
+                return 'Число чётное';
+            } else {
+                return 'Число не чётное';
+            }
+        }
+
+        function isFuel(fuelBak, liters){
+            if(fuelBak >= liters){
+                return 'Бензина хватит';
+            }  else {
+                return 'Бензина не хватит';
+            }
+        }
+       QUnit.module('isNumerik', function(){
+        QUnit.test('Number is numerik', function(assert){
+            assert.equal(isNumerik(5), 'Число не чётное');
+            assert.equal(isNumerik(6), 'Число чётное');
+
+        });
+       });
+
+       QUnit.module('isFuel', function(){
+        QUnit.test('fuelbak is enough', function(assert){
+            assert.equal(isFuel(5, 3), 'Бензина хватит', 'Тест на хватку бензина')
+            assert.equal(isFuel(3, 5), 'Бензина не хватит', 'Тест на нехватку бензина')
+        });
+       });
+
+        QUnit.module('isStroke', function(){
+            QUnit.test('2 number in array is not numerik', function(assert){
+                assert.equal(colomOdd(55693), '5:5:569:3', 'Поставим между нечетными числами ":"');
+                assert.equal(colomOdd(2468), '2468', 'Поставим между нечетными числами ":"');
+            });
+        });
+    </script>
+    <script src = 'zad4.js'></script>
+</body>
+</html>
