@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  width: 500px;
+}
+
+form {
+  width: 200px;
+  background-color: #fff;
+}
+form input {
+  border: 1px solid #ccc;
+  width: 194px;
+  font-size: 14px;
+  padding: 3px;
+  margin: 5px;
+}
+form input[type='submit'] {
+  background-color: #1cbc11;
+  transition: all 0.5s;
+  color: white;
+  width: 200px;
+}
+form input[type='submit']:hover {
+  background-color: #14a20a;
+}
+form input[disabled] {
+  background-color: #3d7939;
+  opacity: 50%;
+}
